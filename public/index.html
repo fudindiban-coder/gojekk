@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Mini Gojek 🚗</h1>
+  <button onclick="cek()">Cek Server</button>
+
+  <script>
+    function cek() {
+      fetch('/health')
+        .then(res => res.json())
+        .then(data => alert(JSON.stringify(data)))
+    }
+  </script>
+</body>
+</html>
